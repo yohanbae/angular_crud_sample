@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.18/angular-ui-router.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.18/stateEvents.js"></script>
+		<script src = "myapp.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="appCtrl" class="container well">
+			<h4><a ui-sref="main()">{{hello}}</a></h4>
+			<div class="text-right">
+				<input type="text" ng-model="keyword" />
+				<button ng-click="search()">Search</button>
+				<button ng-click="create()">New Post</button>
+
+
+			</div>
+		</div>
+		<div class="container" ng-show="noData==true">No article yet</div>
+		<div class="container" ui-view></div>
+
+	</body>
+
+</html>

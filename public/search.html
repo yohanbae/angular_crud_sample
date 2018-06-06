@@ -1,0 +1,6 @@
+
+search result: <br>
+<div ng-repeat="board in boards | filter : keyword track by board.id">
+	<h5><a ui-sref="read({id:board.id})">{{board.title}}</a></h5>
+</div>
+
